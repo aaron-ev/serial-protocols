@@ -35,24 +35,58 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="spi.html">Introduction to SPI interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html#data-transmission">Data transmission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uart.html">Universal Asynchronous Receiber/Tranmitter (UART)</a></li>
 </ul>
 </div>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>This purpose of this documentation is to give a general overview of the most commont serial procols in Embedded Systems.
-The following serial protocols are covered:</p>
+<p>When you connect a microcontroller to a sensor, display, or other module, do you ever think about how the two devices talk to each other? What exactly are they saying?
+How are they able to understand each other?</p>
+<p>Communication between electronic devices is like communication between humans. Both sides need to speak language. In electronics, these languages are called
+<em>communication protocols</em>. Luckily for us, there are only a few communication procols we need to know when building most electronics projects. The three most common proctolos are:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="uart.html#uart"><span class="std std-ref">Universal Asynchronous Receiber/Tranmitter (UART)</span></a></p></li>
-<li><p><a class="reference internal" href="spi.html#spi"><span class="std std-ref">Introduction to SPI interface</span></a></p></li>
+<li><p><strong>Serial Peripheral Interface (SPI)</strong></p></li>
+<li><p><strong>Inter-integrated CIrcuit (I2C)</strong></p></li>
+<li><p><strong>Universal Asynchronous Receiver/Transmitter (UART)</strong></p></li>
 </ul>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>This purpose of this documentation is to give a general overview of the most commont serial procols in Embedded Systems.
+The following serial protocols are covered:
+“””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””””
+* <a class="reference internal" href="uart.html#uart"><span class="std std-ref">Universal Asynchronous Receiber/Tranmitter (UART)</span></a>
+* <a class="reference internal" href="spi.html#spi"><span class="std std-ref">Introduction to SPI interface</span></a></p>
+</div>
+<div class="section" id="electronic-communication">
+<h2>Electronic communication<a class="headerlink" href="#electronic-communication" title="Permalink to this headline">¶</a></h2>
+<p>Frst, we’ll begin with some basic concepts about electronic communication.</p>
+<div class="section" id="serial-vs-parallel-communication">
+<h3>Serial VS parallel communication<a class="headerlink" href="#serial-vs-parallel-communication" title="Permalink to this headline">¶</a></h3>
+<p>Electronic devices talk to each other by sending bits of data through wires physically connected between devices.
+A bit is like a letter in a word, except instead of the 26 letters (in the English alphabet), a bit is binary and can only be a 1 or 0.
+Bits are transferred from one device to another by quick changes in voltage.
+In a system operating at 5 V, a 0 bit is communicated as a short pulse of 0 V, and a 1 bit is communicated by a short pulse of 5 V.</p>
+<p>The bits of data can be transmitted either in parallel or serial form. In parallel communication, the bits of data are sent all at the same time,
+each through a separate wire.
+Figure 1 shows the parallel transmission of the letter “C” in binary (01000011):</p>
+<img alt="_images/exampleOfParallelCommunication.PNG" src="_images/exampleOfParallelCommunication.PNG" />
+<p>Figure 1. Example of parallel communication.</p>
+<p>In serial communication, bits are sent one by one thorugh a single wire. Figure 2 shows the serial transmission of the letter “C” in binary (01000011):</p>
+<img alt="_images/serialCommunication.PNG" src="_images/serialCommunication.PNG" />
+<p>Figure 2. Example of serial communication.</p>
+</div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.analog.com/en/analog-dialogue/articles/introduction-to-spi-interface.html">SPI reference</a></p></li>
+<li><p><a class="reference external" href="https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/">SPI reference extention</a></p></li>
 <li><p><a class="reference external" href="https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html">UART reference</a></p></li>
 </ul>
+</div>
+<div class="section" id="author">
+<h2>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
+<p><strong>Name:</strong> Aaron Escoboza Villegas
+<strong>Linkedin:</strong> <a class="reference external" href="https://www.linkedin.com/in/aaronev/">https://www.linkedin.com/in/aaronev/</a></p>
 </div>
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
@@ -83,6 +117,7 @@ The following serial protocols are covered:</p>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="spi.html">Introduction to SPI interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html#data-transmission">Data transmission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uart.html">Universal Asynchronous Receiber/Tranmitter (UART)</a></li>
 </ul>
 

@@ -51,4 +51,14 @@ MOSI and MISO are data lines. MOSI transmits data from the master to the slave a
 to the master. 
 
 
+Data transmission 
+================= 
 
+To begin SPI communication, the muster must send the clock signal and select the slave by enabling the CS signal.
+Usually chip select is an active low signal; hence, the master must send a logic 0 on theis signal to select th slave.
+SPI is a full-duplex interface; both master and slave can send data at the same time via the MOSI  and MISO lines
+respectively. 
+
+During SPI communication, the data is simultaneously transmitted and received. The serial clock edge synchronizes the shifting 
+and sampling of data. The SPI interface provides the user with flexibility to select the rising or falling edge of the clock
+to sample and/or shift the data.
